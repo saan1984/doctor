@@ -3,11 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatInputModule ,MatButtonModule, MatCheckboxModule ,MatSelectModule,MatOption } from '@angular/material';
-import { MatMenuModule } from '@angular/material/menu';
-import { MatIconModule } from '@angular/material/icon';
-import { MatFormFieldModule } from '@angular/material/form-field';
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -44,7 +40,7 @@ const appRoutes: Routes = [
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(appRoutes),
-    MatButtonModule,MatCheckboxModule,MatIconModule,MatMenuModule,MatFormFieldModule,MatSelectModule
+    NgbModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
