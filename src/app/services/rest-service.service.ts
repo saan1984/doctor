@@ -18,4 +18,8 @@ export class RestServiceService {
      return this.http.get(this.apiUrl+'getDoctorList')
     .map((res:Response) => res.json());
   }
+  getDoctors(id){
+     return this.http.get(this.apiUrl+'getDoctorDetails/'+id)
+    .map((res:Response) => res.json());
+  }
 }
