@@ -1,3 +1,10 @@
-<p>
-  home works!
-</p>
+<div class="container">
+  <h4>Doctors List</h4>
+  <h4 class="text-center" *ngIf="doctorsList.length == 0">Loading list..</h4>
+  <ul class="list-group" *ngIf="doctorsList.length > 0">
+    <li class="list-group-item" *ngFor="let item of doctorsList">
+      <h5> Name : {{item.firstname}} {{item.lastname}} ({{item.qualification}})</h5>
+      <p> Experience : {{item.yearsofexperience}} </p>
+    </li>
+  </ul>
+</div>
