@@ -13,7 +13,6 @@ export class HomeComponent {
   constructor(private rest: RestServiceService) { 
     this.rest.getAllDoctors().subscribe((data:any) =>{
       this.doctorsList = data.data;
-      console.log(this.doctorsList);
     });
   }
 
