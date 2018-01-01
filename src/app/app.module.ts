@@ -15,6 +15,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ViewDoctorComponent } from './view-doctor/view-doctor.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatCardModule} from '@angular/material/card';
 
 const appRoutes: Routes = [
   {path : 'home' , component : HomeComponent},
@@ -43,7 +44,8 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     NgbModule.forRoot(),
     ReactiveFormsModule,
-    HttpModule
+    HttpModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

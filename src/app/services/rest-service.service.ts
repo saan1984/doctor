@@ -6,7 +6,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class RestServiceService {
   apiUrl:string = environment.apiUrl;
-  
+
   constructor(private http: Http) { }
 
   register(data){
@@ -15,7 +15,7 @@ export class RestServiceService {
   }
 
   getAllDoctors(){
-     return this.http.get(this.apiUrl+'getDoctorList')
+     return this.http.post(this.apiUrl+'getDoctorList', {page_no:0, per_page:10})
     .map((res:Response) => res.json());
   }
   getDoctors(id){
