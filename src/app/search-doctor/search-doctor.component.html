@@ -1,3 +1,6 @@
-<p>
-  search-doctor works!
-</p>
+<mat-card class="search-input-container">
+  <mat-form-field class="search-doctor-input">
+    <input matInput placeholder="Search a Doctor"  [formControl]="searchKeyControl">
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="search()" >Search</button>
+</mat-card>

@@ -16,4 +16,8 @@ export class HomeComponent {
     });
   }
 
+  onSearch(doctorsList){
+    this.doctorsList = doctorsList;
+  }
+
 }

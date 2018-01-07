@@ -1,6 +1,14 @@
-.card-container {
-  display: flex;
-  .card {
-    margin: 5px;
+.container{
+  margin: 0% 2%;
+  .search-container{
+    margin-top: 20px;
+  }
+  .card-container {
+    margin-top: 20px;
+    display: flex;
+    .card {
+      margin: 5px;
+    }
   }
 }
+

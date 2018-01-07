@@ -22,4 +22,10 @@ export class RestServiceService {
      return this.http.get(this.apiUrl+'getDoctorDetails/'+id)
     .map((res:Response) => res.json());
   }
+
+  searchDoctors(searchKey) {
+    return this.http.post(this.apiUrl+'search', {
+      "searchParams" : searchKey
+    }).map((res:Response) => res.json());
+  }
 }

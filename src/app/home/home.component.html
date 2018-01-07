@@ -1,8 +1,13 @@
-<div class="card-container">
-  <mat-card class="card" *ngFor="let item of doctorsList">
-    <img mat-card-image src="/assets/image/doctor_male.png" class="profile-image">
-    <mat-card-content>
-      {{item.firstname}} {{item.lastname}}
-    </mat-card-content>
-  </mat-card>
+<div class="container">
+  <div class="search-container">
+    <app-search-doctor (onSearch)="onSearch($event)"></app-search-doctor>
+  </div>
+  <div class="card-container">
+    <mat-card class="card animated fadeInRight" *ngFor="let item of doctorsList">
+      <img mat-card-image src="/assets/image/doctor_male.png" class="profile-image">
+      <mat-card-content>
+        {{item.firstname}} {{item.lastname}}
+      </mat-card-content>
+    </mat-card>
+  </div>
 </div>
